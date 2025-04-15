@@ -1,5 +1,5 @@
 {
-  "name": "support-bot-proxy",
+  "name": "telegram-proxy-bot",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",

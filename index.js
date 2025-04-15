@@ -4,8 +4,8 @@ const app = express();
 
 app.use(express.json());
 
-const TELEGRAM_BOT_TOKEN = "твой_токен_бота";
-const ADMIN_CHAT_ID = "твой_chat_id"; // можно тот же что и сейчас
+const TELEGRAM_BOT_TOKEN = "7555481001:AAERIJWsceiwXXvuDFgI0zguoZcK-IvYRgA";
+const ADMIN_CHAT_ID = "5757629291";
 
 app.post("/send", async (req, res) => {
   const { name, phone, message } = req.body;
@@ -23,13 +23,12 @@ app.post("/send", async (req, res) => {
     });
     res.send("OK");
   } catch (error) {
-    console.error(error.response?.data || error.message);
     res.status(500).send("Ошибка отправки в Telegram");
   }
 });
 
 app.get("/", (req, res) => {
-  res.send("Telegram proxy bot is running");
+  res.send("Bot is working ✅");
 });
 
 const PORT = process.env.PORT || 3000;
